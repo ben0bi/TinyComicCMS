@@ -1,0 +1,4 @@
+*~
+*.bak
+*uploads/*
+!*uploads/null.empty
