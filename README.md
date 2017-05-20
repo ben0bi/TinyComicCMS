@@ -10,5 +10,5 @@ Support for Tablets and Smartphones. Swipe to the left or right on the image to 
 
 Blog function: Each post can have several "blog" entries. This blog is actually only for the creator, there is no commenting function right now.
 
-Where is the administration login link?
+Where is the administration login link?    
 --> In the lower right corner is a "Source"-link. You will find the admin link there on the "Archives" page.
