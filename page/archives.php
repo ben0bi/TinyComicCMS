@@ -19,30 +19,23 @@
 		</div>
 	</div>
 </div>
-<?php ComicCMS::includeJSScripts(''); ?>
 <br />
 
 <div class="adminlinkdiv">
-<a href="_admin/index.php" id="adminlink">Admin</a>
+<span id="adminlink" class="bglinkcolor"><nobr>
+<a href="_admin/index.php" class="bglinkcolor">Admin</a>&nbsp;|
+<a href="https://github.com/ben0bi/TinyComicCMS" target="_new" class="bglinkcolor">Source</a>
+</nobr></span>
 </div>
 
-<script>
-var adminOrigPos=-999;
+<?php ComicCMS::includeJSScripts(''); ?>
 
+<script src="js/AdminLinkOriginalPos.js"></script>
+
+<script>
 $( document ).ready(function()
 {	
-	adminOrigPos=parseFloat($('#adminlink').position().top);
-	console.log("Admin link original y position: "+adminOrigPos);
 	ComicCMS.adjustPageHeight();
-	
-	$(window).resize(function() {location.reload();});
-	
-	$(document).scroll(function()
-	{
-		var st=$(document).scrollTop();
-		st=st+adminOrigPos;
-		$("#adminlink").css('top',st);
-	});
 });
 </script>
 

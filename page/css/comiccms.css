@@ -92,14 +92,16 @@ a:hover
 	padding-bottom:10px;
 }
 
-#admindiv {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;border: 1px solid #ff0000;z-index: 90;}
+#admindiv {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;z-index: 90;}
 #adminlink
 {
 	position: absolute;
 	right: 10px;
 	bottom: 10px;
-	color: #33A;
 }
+.bglinkcolor {color: #33A;}
+.bglinkcolor:visited {color: #33A;}
+.bglinkcolor:hover {color: #33C;}
 
 .invisiblefooter
 {
@@ -185,6 +187,7 @@ input, button
 {
 	#wrapper {width: 800px;}
 	.blogpost {width: 800px;}
+	#sourcelink {display: block;}
 }
 
 @media (max-width:799px) 
@@ -192,4 +195,6 @@ input, button
 	#wrapper {width: 100%;}
 	.blogpost {width: 100%;}
 	.pagelinks {font-size: 12pt;}
+	/* hide the source link on the main page. */
+	#sourcelink {display: none;}
 }

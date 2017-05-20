@@ -35,8 +35,19 @@
 	</div>
 </div>
 
+
+<!-- maybe this link is not used in your design, so its not in the above function. -->
+<!-- <script src="js/AdminLinkOriginalPos.js"></script> -->
+<div class="adminlinkdiv">
+<span id="adminlink">
+<a href="https://github.com/ben0bi/TinyComicCMS" target="_new" class="bglinkcolor" id="sourcelink">Source</a>
+</span>
+</div>
+
 <!-- Scripts -->
 <?php ComicCMS::includeJSScripts(''); ?>
+
+<script src="js/AdminLinkOriginalPos.js"></script>
 
 <script>
 
@@ -49,6 +60,7 @@ $( document ).ready(function()
 	
 	ComicCMS.showTitle();
 });
+
 </script>
 
 </body>

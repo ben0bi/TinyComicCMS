@@ -19,7 +19,7 @@ $admin_login_password="adminpw";
 $db_host = "localhost"; /* The host of your DB, mostly localhost */
 $db_name = "tinycomiccms"; /* The name of your DB - should be same as username with above instructions. */
 $db_user = "tinycomiccms";	/* The user name (DB user, not system user!) */
-$db_pass = "TinyCCMSpw";	/* The password to your DB */
+$db_pass = "tCCMSpw";	/* The password to your DB */
 
 // the relative path for the uploads.
 $relative_upload_path="../uploads/";
@@ -30,6 +30,3 @@ $relative_upload_path="../uploads/";
  each found word/sentence and leave the rest alone.
 */
 include(__DIR__."/php/lang.german.php"); // the web page is in german language.
-
-
-
