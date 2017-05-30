@@ -60,7 +60,7 @@ ComicCMS.updateBlogPostShowForm = function(dirToRoot, blogID)
 	  	url: path+"?blogid="+blogID,
   		success : function(data) 
 		{
-		        confirmBox(word_title_update_blogpost, data, word_save_blogpost, function(dialog)
+		    confirmBox(word_title_update_blogpost, data, word_save_blogpost, function(dialog)
 			{
 				var blogtitle=$("#update_blogtitle").val();
 				var blogtext=$("#update_blogtext").val();
