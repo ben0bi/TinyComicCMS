@@ -29,6 +29,7 @@ $word_title="Titel";				// Title (word)
 $word_file="Datei";				// File (word)
 $word_text="Text";				// Text (word)
 $word_title_update_blogpost="Blog Eintrag updaten.."; // Update Blogpost..
+$word_title_update_title="Seitentitel ändern.."; // Update Blogpost..
 
 // sentences - you can use html.
 $sentence_title_reallydelete="Seite wirklich löschen?";				// really delete a page?
@@ -51,6 +52,7 @@ $sentence_blog_must_have_title_and_text = "Titel UND Text des Blogeintrages müs
 $sentence_blog_must_have_title_and_text_02 = "Titel UND Text des Blogeintrages müssen ausgefüllt sein.";
 $sentence_new_page_created="Die neue Seite wurde erstellt.";			// new page was created (success)
 $sentence_new_blogpost_created="Ein neuer Blog Eintrag wurde erstellt.";	// new blog entry created (success)
+$sentence_pagetitle_updated="Der Titel der Seite wurde erneuert.";			// blog post was updated (success)
 $sentence_blogpost_updated="Der Blog Eintrag wurde erneuert.";			// blog post was updated (success)
 $sentence_please_wait="Bitte warten..";						// Please wait..
 $sentence_please_wait_for_upload="Bitte warten bis der Upload fertig ist.";	// Please wait until upload finishes.

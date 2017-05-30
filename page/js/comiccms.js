@@ -50,6 +50,35 @@ ComicCMS.showAdminBlogTitles= function(id)
 	}
 }
 
+
+// show a box to update a page title.
+ComicCMS.updatePageTitleForm = function(dirToRoot, pageID)
+{
+	var path=dirToRoot+"php/ajax_updatePageTitleForm.php";
+	//get form with its values
+	$.ajax({
+	  	type: "GET",
+	  	url: path+"?pageid="+pageID,
+  		success : function(data)
+		{
+		    confirmBox(word_title_update_title, data, word_save_page, function(dialog)
+			{
+				var pagetitle=$("#update_pagetitle").val();
+
+				if(pagetitle=="")
+				{
+					alert("Page must have a title.");
+					return;
+				}
+
+				dialog.close();
+				// submit the form.
+				$("#pagetitleupdateform").submit();
+			});
+	        }
+	});
+}
+
 // show a box to update a blog post.
 ComicCMS.updateBlogPostShowForm = function(dirToRoot, blogID)
 {
@@ -109,6 +138,42 @@ ComicCMS.updateBlogpost = function(dirToRoot, blogID)
 				$("#archivecontent").html(xhr.responseText);
 	  	} else {
 	    		alert('AJAX ERROR: upload page call failed! ('+xhr.status+')');
+	  	}
+		closeAllDialogs();
+		actualAdminBlogTitleShowID=-1;
+	};
+
+	xhr.send(formData);
+}
+
+// Update the title of a page.
+ComicCMS.updatePageTitle = function(dirToRoot, pageID)
+{
+	var pagetitle=$('#update_pagetitle').val();
+
+	// create form data
+	var formData=new FormData();
+
+	formData.append('pageid', pageID);
+	formData.append('pagetitle', pagetitle);
+
+	BootstrapDialog.show({
+		title: sentence_please_wait,
+		message: "<center>"+sentence_please_wait_for_upload+"</center>"
+        });
+
+	var xhr=new XMLHttpRequest();
+	xhr.open('POST',dirToRoot+"php/ajax_updatepagetitle.php",true);
+
+	// Set up a handler for when the request finishes.
+	xhr.onload = function ()
+	{
+		if (xhr.status === 200) {
+	    		// File(s) uploaded. Maybe show response.
+			if(xhr.responseText!="" && xhr.responseText!=null && xhr.responseText!=0)
+				$("#archivecontent").html(xhr.responseText);
+	  	} else {
+	    		alert('AJAX ERROR: upload page call failed! (Ref. B) ('+xhr.status+')');
 	  	}
 		closeAllDialogs();
 		actualAdminBlogTitleShowID=-1;

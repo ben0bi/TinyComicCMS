@@ -70,7 +70,7 @@ class SQL
 		}
 		return $output;
 	}
-	
+
 /* Table Names */
 	public static $table_comicpage="comicpage";
 	public static $table_blogpost="blogpost";

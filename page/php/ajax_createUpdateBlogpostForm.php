@@ -8,7 +8,7 @@ $id=$_GET['blogid'];
 SQL::openConnection();
 $blogresult=SQL::query(SQL::select_from_table(SQL::$table_blogpost,'id',$id));
 $blogrow=SQL::getFirstRow($blogresult);
-					
+
 if($blogrow!=-1)
 {
 	echo '<center><form id="blogpostupdateform" action="../php/ajax_updateblogpost.php" method="POST">';

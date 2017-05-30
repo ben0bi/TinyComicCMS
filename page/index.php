@@ -59,6 +59,8 @@ $( document ).ready(function()
 	ComicCMS.adjustPageHeight();
 	
 	ComicCMS.showTitle();
+	
+	$("#pagecontent").focus();
 });
 
 </script>

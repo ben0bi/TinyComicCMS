@@ -82,6 +82,7 @@ class ComicCMS
 		global $word_title_comicpage;
 		global $word_save_page;
 		global $word_save_blogpost;
+		global $word_title_update_title;
 		global $word_title_update_blogpost;
 		global $sentence_title_newpage;
 		global $sentence_title_reallydelete;
@@ -103,6 +104,7 @@ class ComicCMS
 		self::JSvar('word_title_comicpage', $word_title_comicpage);
 		self::JSvar('word_save_page', $word_save_page);
 		self::JSvar('word_save_blogpost', $word_save_blogpost);
+		self::JSvar('word_title_update_title', $word_title_update_title);
 		self::JSvar('word_title_update_blogpost', $word_title_update_blogpost);
 		self::JSvar('sentence_title_newpage', $sentence_title_newpage);
 		self::JSvar('sentence_title_reallydelete', $sentence_title_reallydelete);
@@ -348,6 +350,7 @@ class ComicCMS
 			if($rowlast!=-1) {$lastid=$rowlast->pageorder;}
 		}
 
+		// show posts.
 		echo '<article id="archives">'.chr(13);
 		$archiveresult=SQL::query(SQL::query_archives());
 		if($archiveresult!=-1)
@@ -398,6 +401,9 @@ class ComicCMS
 
 					echo '</div>';
 					echo "</td>\n";
+
+					// show change title link
+					echo("<td class=\"$class\" valign=\"top\">|&nbsp;<a href=\"javascript:\" onclick=\"ComicCMS.updatePageTitleForm('$dirToRoot', '$id');\">&lt;- ???</a>&nbsp;</td>");
 
 					// show page moving stuff
 					if($pageorder!=$firstid)
