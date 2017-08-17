@@ -31,5 +31,3 @@ $relative_upload_path="../uploads/";
 */
 include(__DIR__."/php/lang.german.php"); // the web page is in german language.
 
-
-

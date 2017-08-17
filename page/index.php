@@ -27,7 +27,7 @@
 <body>
 <div id="wrapper">
 	<div id="pagetitle">
-		<img id="pagetitle_image" src="images/pagetitle.png" /><br />
+		<a href="../../index.html" style="border: 0;"><img id="pagetitle_image" src="images/pagetitle.png" /></a><br />
 	</div>
 
 	<div id="pagecontent">

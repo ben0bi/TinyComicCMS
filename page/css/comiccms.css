@@ -72,6 +72,11 @@ a:hover
 #pageimage 
 {
 	position: relative;
+	border: 2px solid #AAAA33;
+	border-right: 2px solid #777722;
+	border-bottom: 2px solid #777722;
+	padding: 3px;
+	border-radius: 3px;
 }
 
 #pagecontent .title {font-family: 'mainLinkFont', sans-serif; font-size: 20pt;}
@@ -80,6 +85,8 @@ a:hover
 {
 	position: relative;
 	left: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 /* Position changes when swiping on a tablet. */
@@ -88,8 +95,6 @@ a:hover
 	position: absolute;
 	top: 0px;
 	left: 0px;
-	padding-top: 10px; 
-	padding-bottom:10px;
 }
 
 #admindiv {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;z-index: 90;}
@@ -197,4 +202,5 @@ input, button
 	.pagelinks {font-size: 12pt;}
 	/* hide the source link on the main page. */
 	#sourcelink {display: none;}
+	#pageimage {border: 0; padding: 0;}
 }
