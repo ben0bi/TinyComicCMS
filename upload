@@ -1,7 +1,18 @@
 #!/bin/bash
 
+mv ../TinyComicCMS/config.php config_old.php
+mv ../TinyComicCMS/upload upload_old
+cp -r * ../TinyComicCMS/
+echo "Files copied."
+mv ../TinyComicCMS/config_old.php config.php
+mv ../TinyComicCMS/upload_old upload
+cd ../TinyComicCMS/
+
 git add .
 git commit -m "$1"
 git push -u origin master
 git show
+
+cd ../StarForce/
+echo "Upload Done."
 
