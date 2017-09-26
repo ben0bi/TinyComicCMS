@@ -29,7 +29,7 @@ body
 	min-height: 100%;
 	width: 100%;
 	max-width: 100%;
-    overflow-x: hidden;
+    	overflow-x: hidden;
 }
 
 a 
@@ -58,6 +58,7 @@ a:hover
 {
 	position: absolute;
 	top: 0px;
+	margin: 0 auto;
 	/* border: 1px solid #0f0; */
 }
 
@@ -195,7 +196,8 @@ input, button
 	#sourcelink {display: block;}
 }
 
-@media (max-width:799px) 
+/* mobile phones 1 */
+@media (max-width:799px)
 {
 	#wrapper {width: 100%;}
 	.blogpost {width: 100%;}
@@ -204,3 +206,16 @@ input, button
 	#sourcelink {display: none;}
 	#pageimage {border: 0; padding: 0;}
 }
+
+/* mobile phones 2 */
+@media (min-width:800px) and (orientation:portrait)
+{
+	#wrapper {width: 100%;}
+	.blogpost {width: 100%;}
+	.pagelinks {font-size: 30pt;}
+	/* hide the source link on the main page. */
+	#sourcelink {display: none;}
+	#pageimage {border: 0; padding: 0;}
+	body {font-size: 20pt;}
+}
+
