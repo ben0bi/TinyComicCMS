@@ -1,4 +1,4 @@
 *~
 *.bak
 *uploads/*
-!*uploads/null.empty
+config.php
