@@ -68,6 +68,11 @@ $( document ).ready(function()
 		$('#pageimageMoveContainer').css('display', 'block');
 		$('#bottomnavigatinglinks').css('display', 'block');
 		$('.blogpost').css('display', 'block');
+		
+		// border problems: removed the border :(
+		/*	var w=parseInt($('#pageimageMoveContainer').width()-20);
+		$('#pageimage').width(w+'px');
+		*/
 	}).each(function() {
 		// also do it from cache.
 			if(this.complete) $(this).load();

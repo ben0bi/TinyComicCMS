@@ -74,10 +74,10 @@ a:hover
 {
 	position: relative;
 	border-radius: 3px;
-	border: 2px solid #AAAA33;
+	/*border: 2px solid #AAAA33;
 	border-right: 2px solid #777722;
 	border-bottom: 2px solid #777722;
-	padding: 3px;
+	padding: 3px;*/
 }
 
 #pagecontent .title {font-family: 'mainLinkFont', sans-serif; font-size: 20pt;}
@@ -216,6 +216,7 @@ input, button
 	/* hide the source link on the main page. */
 	#sourcelink {display: none;}
 	#pageimageMoveContainer  {border: 0; padding: 0;}
+	#pageimage  {border: 0; padding: 0;}
 }
 
 /* mobile phones 2 */
@@ -227,6 +228,7 @@ input, button
 	/* hide the source link on the main page. */
 	#sourcelink {display: none;}
 	#pageimageMoveContainer  {border: 0; padding: 0;}
+	#pageimage {border: 0; padding: 0;}
 	body {font-size: 20pt;}
 }
 
