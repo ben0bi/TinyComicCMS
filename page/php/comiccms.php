@@ -202,13 +202,18 @@ class ComicCMS
 		$comicrow=SQL::getFirstRow($comicresult);
 		if($comicrow!=-1)
 		{
+
+			// TODO: put that in language file.
+			$sentence_wait_for_load="Bitte warten, ich lade..";
+			
 			$realpageid=$comicrow->id;
 			$comicimage=$comicrow->image;
 			$comictitle=SQL::sqlToText($comicrow->title);
 			if($comicimage!="")
 			{
 				// output comic page
-				echo '<div id="pageimagediv"><div id="pageimageMoveContainer"><img id="pageimage" src="'.$relative_upload_path.$comicimage.'" />'.chr(13);
+				echo '<div id="pageimagediv"><div id="loadertext">'.$sentence_wait_for_load.'</div>';
+				echo '<div id="pageimageMoveContainer"><img id="pageimage" src="'.$relative_upload_path.$comicimage.'" />'.chr(13);
 				echo '</div><div class="popup">'.$comictitle.'</div>'.chr(13);
 				echo '</div>'.chr(13);
 				ComicCMS::showNavigatingLinks($pageid, 'bottomnavigatinglinks');

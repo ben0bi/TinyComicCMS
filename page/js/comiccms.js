@@ -208,12 +208,14 @@ ComicCMS.initializeTouch = function()
 
 	pgimgdiv.addEventListener('touchstart', function(e)
 	{
+		e.preventDefault();
 		ComicCMS.touchStartX=e.changedTouches[0].pageX;
 	});
 
 	// move the image on touch.
 	pgimgdiv.addEventListener('touchmove', function(e)
 	{
+		e.preventDefault();
 		var startedX=ComicCMS.touchStartX;
 		var actualX=e.changedTouches[0].pageX;
 		var computed = actualX-startedX;
@@ -224,6 +226,7 @@ ComicCMS.initializeTouch = function()
 	// maybe load a page if touch ends.
 	pgimgdiv.addEventListener('touchend', function(e)
 	{
+		e.preventDefault();
 		var dir = 0;
 		var tE=e.changedTouches[0].pageX;
 		if(tE<ComicCMS.touchStartX-200)

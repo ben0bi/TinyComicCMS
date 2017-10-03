@@ -35,7 +35,6 @@
 	</div>
 </div>
 
-
 <!-- maybe this link is not used in your design, so its not in the above function. -->
 <!-- <script src="js/AdminLinkOriginalPos.js"></script> -->
 <div class="adminlinkdiv">
@@ -61,12 +60,19 @@ $( document ).ready(function()
 	ComicCMS.showTitle();
 	
 	// show the stuff after the image has loaded.
-	$('#pageimage').load(function() 
+	
+	$("#pageimage").one("load", function() 
 	{
+		// do stuff
+		$('#loadertext').hide();
+		$('#pageimageMoveContainer').css('display', 'block');
 		$('#bottomnavigatinglinks').css('display', 'block');
 		$('.blogpost').css('display', 'block');
+	}).each(function() {
+		// also do it from cache.
+			if(this.complete) $(this).load();
 	});
-	
+
 	$("#pagecontent").focus();
 });
 
