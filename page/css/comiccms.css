@@ -105,6 +105,10 @@ a:hover
 	right: 10px;
 	bottom: 10px;
 }
+
+/* the bottom navigating links will be shown after the image has loaded. */
+#bottomnavigatinglinks {display: none;}
+
 .bglinkcolor {color: #33A;}
 .bglinkcolor:visited {color: #33A;}
 .bglinkcolor:hover {color: #33C;}
@@ -123,6 +127,9 @@ a:hover
 	color: #33A;
 }
 
+/* the bottom navigating links will be shown after the image has loaded. */
+.bottomnavigatinglinks {display: none;}
+
 .popup 
 {
 	background-color: #111;
@@ -136,6 +143,7 @@ a:hover
 
 .blogpost
 {
+	display: none;
 	position: relative;
 	border: 2px solid #003;
 	border-bottom: 2px solid #001;

@@ -60,6 +60,13 @@ $( document ).ready(function()
 	
 	ComicCMS.showTitle();
 	
+	// show the stuff after the image has loaded.
+	$('#pageimage').load(function() 
+	{
+		$('#bottomnavigatinglinks').css('display', 'block');
+		$('.blogpost').css('display', 'block');
+	});
+	
 	$("#pagecontent").focus();
 });
 
