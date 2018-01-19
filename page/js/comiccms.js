@@ -87,7 +87,7 @@ ComicCMS.updateBlogPostShowForm = function(dirToRoot, blogID)
 	$.ajax({
 	  	type: "GET",
 	  	url: path+"?blogid="+blogID,
-  		success : function(data) 
+  		success : function(data)
 		{
 		    confirmBox(word_title_update_blogpost, data, word_save_blogpost, function(dialog)
 			{
@@ -245,7 +245,7 @@ ComicCMS.initializeTouch = function()
 			ComicCMS.nextPage();
 		//alert("End: "+dir);
 	});
-	
+
 	pgimgdiv.addEventListener('touchcancel', function(e) 
 	{
 		// reset the image position.
@@ -294,9 +294,9 @@ ComicCMS.window_createblogpost = function(dirToRoot, id)
 {
 	var msg='<center><form id="blogpostcreateform" action="'+dirToRoot+'php/ajax_createblogpost.php" method="POST">';
 	msg=msg+'<hr><table border="0" style="width:100%;" >';
-	msg=msg+'<tr><td>'+word_title+':&nbsp;</td>';
+	msg=msg+'<tr><td class="black">'+word_title+':&nbsp;</td>';
 	msg=msg+'<td><input type="text" id="upload_blogtitle" name="upload_blogtitle" /></td></tr>';
-	msg=msg+'<tr><td valign="top">'+word_text+':&nbsp;</td>';
+	msg=msg+'<tr><td valign="top" class="black">'+word_text+':&nbsp;</td>';
 	msg=msg+'<td><textarea id="upload_blogtext" name="upload_blogtext" style="width:100%;height:200px;"></textarea></td></tr>';
 	msg=msg+'</table></form></center>';
 
@@ -370,14 +370,14 @@ ComicCMS.window_createPage = function(dirToRoot)
 {
 	var msg='<center><form id="pageuploadform" action="'+dirToRoot+'php/ajax_uploadpage.php" method="POST">';
 	msg=msg+'<h3>'+word_title_comicpage+'</h3><table border="0">';
-	msg=msg+'<tr><td>'+word_title+':&nbsp;</td>';
+	msg=msg+'<tr><td class="black">'+word_title+':&nbsp;</td>';
 	msg=msg+'<td><input type="text" id="upload_pagetitle" name="upload_pagetitle" /></td></tr>';
-	msg=msg+'<tr><td>'+word_file+':&nbsp;</td>';
+	msg=msg+'<tr><td class="black">'+word_file+':&nbsp;</td>';
 	msg=msg+'<td><input type="file" id="upload_pagefile" name="upload_pagefile" /></td></tr>';
 	msg=msg+'</table><hr><h3>'+word_title_blogpost+'</h3><table border="0" style="width:100%;" >';
-	msg=msg+'<tr><td>'+word_title+':&nbsp;</td>';
+	msg=msg+'<tr><td class="black">'+word_title+':&nbsp;</td>';
 	msg=msg+'<td><input type="text" id="upload_blogtitle" name="upload_blogtitle" /></td></tr>';
-	msg=msg+'<tr><td valign="top">'+word_text+':&nbsp;</td>';
+	msg=msg+'<tr><td valign="top" class="black">'+word_text+':&nbsp;</td>';
 	msg=msg+'<td><textarea id="upload_blogtext" name="upload_blogtext" style="width:100%;height:200px;"></textarea></td></tr>';
 	msg=msg+'</table></form></center>';
 

@@ -34,7 +34,7 @@
 
 <script>
 $( document ).ready(function()
-{	
+{
 	ComicCMS.adjustPageHeight();
 });
 </script>

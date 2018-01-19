@@ -205,7 +205,7 @@ class ComicCMS
 
 			// TODO: put that in language file.
 			$sentence_wait_for_load="Bitte warten, ich lade..";
-			
+
 			$realpageid=$comicrow->id;
 			$comicimage=$comicrow->image;
 			$comictitle=SQL::sqlToText($comicrow->title);
@@ -428,7 +428,7 @@ class ComicCMS
 				}else{
 					// show end user archive link
 					echo "<td class=\"$class\" valign=\"top\" onmouseover=\"$('#dateof_$id').css('display','block');\" onmouseout=\"$('#dateof_$id').css('display', 'none');\"><a href=\"index.php?id=$pageorder\">$title</a></td>".chr(13);
-					echo "<td class=\"$class\" valign=\"top\" style=\"min-width:100px;\"><span id=\"dateof_$id\" style=\"display:none;\">&nbsp;<small>&lt-- ".$date."</small></span></td>".chr(13);
+					echo "<td class=\"$class\" valign=\"top\" style=\"min-width:100px;\"><span id=\"dateof_$id\" style=\"display:none;\">&nbsp;<small>&#8882;&#8986; ".$date."</small></span></td>".chr(13);
 				}
 				echo "</tr>".chr(13);
 			}

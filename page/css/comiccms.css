@@ -29,7 +29,17 @@ body
 	min-height: 100%;
 	width: 100%;
 	max-width: 100%;
-    overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+table
+{
+	font-size: inherit;
+}
+
+.black, input, textarea
+{
+	color: #000000;
 }
 
 a 
@@ -217,6 +227,12 @@ input, button
 	#sourcelink {display: none;}
 	#pageimageMoveContainer  {border: 0; padding: 0;}
 	#pageimage  {border: 0; padding: 0;}
+}
+
+/* Bigger screens. */
+@media (min-width:800px)
+{
+	.pagelinks {font-size: 30pt;}
 }
 
 /* mobile phones 2 */

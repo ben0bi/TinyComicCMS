@@ -13,7 +13,7 @@ if($pagerow!=-1)
 {
 	echo '<center><form id="pagetitleupdateform" action="../php/ajax_updatepagetitle.php" method="POST">';
 	echo '<table border="0" style="width:100%;" >';
-	echo '<tr><td>'.$word_title.':&nbsp;</td>';
+	echo '<tr><td class="black">'.$word_title.':&nbsp;</td>';
 	echo '<td><input type="text" id="update_pagetitle" name="update_pagetitle" value="'.SQL::sqlToText($pagerow->title).'"/></td></tr>';
 	echo '</table></form></center>';
 

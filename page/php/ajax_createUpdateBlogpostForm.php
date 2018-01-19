@@ -13,9 +13,9 @@ if($blogrow!=-1)
 {
 	echo '<center><form id="blogpostupdateform" action="../php/ajax_updateblogpost.php" method="POST">';
 	echo '<table border="0" style="width:100%;" >';
-	echo '<tr><td>'.$word_title.':&nbsp;</td>';
+	echo '<tr><td class="black">'.$word_title.':&nbsp;</td>';
 	echo '<td><input type="text" id="update_blogtitle" name="update_blogtitle" value="'.SQL::sqlToText($blogrow->title).'"/></td></tr>';
-	echo '<tr><td valign="top">'.$word_text.':&nbsp;</td>';
+	echo '<tr><td valign="top" class="black">'.$word_text.':&nbsp;</td>';
 
 	// replace \n else it will make it <br /> (I don't know why)
 	$text=SQL::sqlToText($blogrow->text);
