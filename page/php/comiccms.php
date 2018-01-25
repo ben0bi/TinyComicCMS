@@ -156,7 +156,7 @@ class ComicCMS
 	{
 		global $word_link_previous, $word_link_next, $word_link_first, $word_link_last, $word_link_archives;
 		echo '<div class="pagelinks" id="'.$divid.'">'.chr(13);
-		echo '<center><table border="0"><tr>'.chr(13);
+		echo '<center><table border="0" class="pagelinks"><tr>'.chr(13);
 		// Previous
 		echo '<td><nobr><a href="index.php?page=prev&id='.($pageid-1).'">&nbsp;'.$word_link_previous.'&nbsp;</a></nobr></td>'.chr(13);
 		echo '<td>|</td>'.chr(13);
