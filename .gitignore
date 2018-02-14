@@ -1,4 +1,4 @@
 *~
 *.bak
 *uploads/*
-config.php
+php/config.php

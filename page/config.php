@@ -1,12 +1,12 @@
 <?php
-/* Password for the login. 
+/* Password for the login.
 Users will not see it because it is in PHP code.
 (Most easy login I could think of.) *
 */
 $admin_login_password="feudor5";
 
 /* SQL Credentials */
-/* 
+/*
 	Fast install with phpmyadmin:
 	-> Go to your phpmyadmin
 	-> Click on "Users"

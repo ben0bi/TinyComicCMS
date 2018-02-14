@@ -18,7 +18,7 @@ sudo cp -r assets/* /var/www/html/TinyComicCMS/assets/
 
 echo "Copy upload"
 cd /var/www/html/TinyComicCMS/
-sudo ./upload_TCC $1
+sudo ./upload_TCC "$1"
 
 cd /var/www/html/StarForce
 echo "Done."
