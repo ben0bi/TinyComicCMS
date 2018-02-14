@@ -3,7 +3,7 @@
 Users will not see it because it is in PHP code.
 (Most easy login I could think of.) *
 */
-$admin_login_password="feudor5";
+$admin_login_password="anypass";
 
 /* SQL Credentials */
 /*
@@ -17,9 +17,9 @@ $admin_login_password="feudor5";
 	-> Copy your data down here.
 */
 $db_host = "localhost"; /* The host of your DB, mostly localhost */
-$db_name = "starforce"; /* The name of your DB - should be same as username with above instructions. */
-$db_user = "starforce";	/* The user name (DB user, not system user!) */
-$db_pass = "forcestar";	/* The password to your DB */
+$db_name = "tinycomiccms"; /* The name of your DB - should be same as username with above instructions. */
+$db_user = "tinycomiccms";	/* The user name (DB user, not system user!) */
+$db_pass = "comiccmstiny";	/* The password to your DB */
 
 // the relative path for the uploads.
 $relative_upload_path="../uploads/";
