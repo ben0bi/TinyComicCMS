@@ -235,6 +235,7 @@ class ComicCMS
 					echo '<div class="date">'.$blogdate.'</div>'.chr(13);
 					echo '<div class="text">'.chr(13);
 					// create line breaks on blog text.
+					//echo "<pre>$blogtext</pre>----------------------------------------------------------";
 					echo ComicCMS::parseEnterChars($blogtext);
 					echo '</div>'.chr(13);
 					echo '</article>'.chr(13);
@@ -249,7 +250,7 @@ class ComicCMS
 		SQL::closeConnection();
 	}
 
-	// make html line breaks into a text.
+	// (OBSOLETE?) make html line breaks into a text.
 	public static function parseEnterChars($text)
 	{
 		$strlen = strlen($text);
@@ -257,8 +258,8 @@ class ComicCMS
 		for( $i = 0; $i <= $strlen; $i++ )
 		{
     			$char = substr( $text, $i, 1 );
-			if($char==chr(13))
-				$output=$output.'</br>';
+			if($char==chr(13) || $char=='\r' || $char=='\n')
+				$output=$output.'<br />';
 			else
 				$output=$output.$char;
 		}

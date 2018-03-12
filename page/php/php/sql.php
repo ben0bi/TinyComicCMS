@@ -17,6 +17,7 @@ class SQL
 				case "'": $output=$output.'%%2'; break;
 				case "`": $output=$output.'%%3'; break;
 				case "´": $output=$output.'%%4'; break;
+				case chr(13): $output=$output.'%%5';break;
 				default:
 					$output=$output.$char;
 			}
@@ -56,6 +57,12 @@ class SQL
 				case "4":
 					$t="4"; 
 					if($trigger==2) {$t="´";} 
+					$output=$output.$t; 
+					$trigger=0;
+					break;
+				case "5":
+					$t="4"; 
+					if($trigger==2) {$t=chr(13);} 
 					$output=$output.$t; 
 					$trigger=0;
 					break;
