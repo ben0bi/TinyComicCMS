@@ -214,8 +214,11 @@ class ComicCMS
 				// output comic page
 				echo '<div id="pageimagediv"><div id="loadertext">'.$sentence_wait_for_load.'</div>';
 				echo '<div id="pageimageMoveContainer"><img id="pageimage" src="'.$relative_upload_path.$comicimage.'" />'.chr(13);
-				echo '</div><div class="popup">'.$comictitle.'</div>'.chr(13);
-				echo '</div>'.chr(13);
+				echo '</div>';
+				echo '<div class="popup">'.$comictitle.'</div>'.chr(13);
+				echo '</div>';
+
+				//echo '</div>'.chr(13);
 				ComicCMS::showNavigatingLinks($pageid, 'bottomnavigatinglinks');
 			}else{
 				echo("<br /><br />$comictitle<br /><br />$sentence_error_no_image".chr(13));
@@ -250,7 +253,7 @@ class ComicCMS
 		SQL::closeConnection();
 	}
 
-	// (OBSOLETE?) make html line breaks into a text.
+	// make html line breaks into a text.
 	public static function parseEnterChars($text)
 	{
 		$strlen = strlen($text);
@@ -426,6 +429,8 @@ class ComicCMS
 
 					// show create blog post
 					echo "<td class=\"$class\" valign=\"top\">&nbsp;|&nbsp;<a href=\"javascript:\" onclick=\"ComicCMS.window_createblogpost('../','$id')\">$word_link_newblogpost</a></td>\n";
+					// show date
+					echo "<td class=\"$class\" valign=\"top\" style=\"min-width:100px;\"><span id=\"dateof_$id\">&nbsp;<small>|&nbsp;&#8986; ".$date."</small></span></td>".chr(13);
 				}else{
 					// show end user archive link
 					echo "<td class=\"$class\" valign=\"top\" onmouseover=\"$('#dateof_$id').css('display','block');\" onmouseout=\"$('#dateof_$id').css('display', 'none');\"><a href=\"index.php?id=$pageorder\">$title</a></td>".chr(13);
